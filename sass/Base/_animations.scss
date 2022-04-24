@@ -1,0 +1,73 @@
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 1.8px solid $color3;
+    }
+    50% {
+        background-position: .01rem 0;
+        opacity: 1;
+        border-right: 1.8px solid $color3;
+    }
+    75% {
+        background-position: .03rem 0;
+        opacity: 1;
+        border-right: 1.8px solid $color3;
+    }
+    100% {
+        background-position: .1rem 0;
+        opacity: 1;
+        border-right: 1.8px solid $color3;
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1%,
+    99% {
+        border-right: 1px solid $color4;
+    }
+    100% {
+        border-right: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*-----------ABOUT ME--------------*/
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: $color1;
+    }
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: transparent;
+    }
+}

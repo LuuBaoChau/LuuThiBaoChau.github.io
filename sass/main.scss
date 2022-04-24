@@ -1,0 +1,45 @@
+/* 
+Base/ (chứa các setting ban đầu)
+Components/ ( chứa các bộ phận nhỏ dễ tái sử dụng như button, card, …)
+Layout/ ( chứa footer, navbar,…)
+Pages/ (chứa tên các page nếu project web của bạn có nhiều page khác nhau vd: home, login, …)
+Abstracts/ (chứa animation, các function, mixin khi sử dụng sass sẽ được đề cập kĩ hơn khi chúng ta làm quen với sass)
+Themes/ (các mẫu có sẵn)
+Vendors/ (code CSS bên ngoài như bootstrap, …)
+*/
+
+
+/* --- Abstracts --- */
+
+@import './Abstracts/functions';
+@import './Abstracts/mixins';
+@import './Abstracts/variables';
+
+/* --- Base --- */
+
+@import './Base/animations';
+@import './Base/base';
+@import './Base/typography';
+@import './Base/utilities';
+
+/* --- Component --- */
+
+@import './Component/introduce';
+@import './Component/resume';
+@import './Component/aboutme';
+@import './Component/education';
+@import './Component/hardskills';
+@import './Component/softskills';
+@import './Component/experience';
+@import './Component/bgvideo';
+@import './Component/btn-view';
+@import './Component/contact';
+
+/* --- Layout --- */
+
+@import './Layout/header';
+@import './Layout/footer';
+
+/* --- Pages --- */
+
+@import './Pages/home';

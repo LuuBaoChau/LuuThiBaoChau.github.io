@@ -1,0 +1,13 @@
+    header {
+        height: 100vh;
+        background-color: $bg-color;
+        background-size: cover;
+        background-position: center;
+        line-height: 2.8rem;
+        @include respond(phone1) {
+            height: 115vh;
+        }
+        @include respond(phone2) {
+            height: 100vh;
+        }
+    }

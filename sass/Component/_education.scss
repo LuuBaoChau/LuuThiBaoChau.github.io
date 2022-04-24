@@ -1,0 +1,138 @@
+.education {
+    height: 100vh;
+    background-color: #fcfaf7;
+    background-image: url("../img/bg2.png");
+    background-size: cover;
+    background-position: center;
+    @include respond(desktop1) {
+        height: 70vh;
+    }
+    @include respond(desktop2) {
+        height: 70vh;
+    }
+    @include respond(desktop3) {
+        height: 85vh;
+    }
+    @include respond(desktop5) {
+        height: 80vh;
+    }
+    &__row {
+        display: grid;
+        width: 100rem;
+        margin: 0 auto;
+        grid-template-columns: 55% 45%;
+        grid-column-gap: 2rem;
+        padding: 3.5rem;
+        text-align: center;
+        @include respond(ipad2) {
+            display: block;
+            margin-left: 3.5rem;
+        }
+        @include respond(phone1) {
+            display: block;
+            margin-left: 2rem;
+            margin-top: -10rem;
+            width: 65rem;
+        }
+        @include respond(phone2) {
+            display: block;
+            margin-left: 0;
+            margin-top: -10rem;
+        }
+        &--col1 {
+            font-size: $fontsize-content3;
+            margin-top: 5rem;
+            text-align: left;
+            vertical-align: middle;
+            p {
+                margin: 1.4rem auto;
+                margin-bottom: 2rem;
+            }
+            @include respond(ipad2) {
+                width: 80%;
+            }
+            @include respond(phone2) {
+                width: 67%;
+            }
+        }
+        h3 {
+            letter-spacing: .1rem;
+        }
+        .composition {
+            position: relative;
+            &__photo {
+                width: 55%;
+                border-radius: .5rem;
+                outline-offset: 1rem;
+                position: absolute;
+                z-index: 10;
+                transition: all .2s;
+                @include respond(ipad1) {
+                    width: 50%;
+                }
+                @include respond(ipad2) {
+                    width: 30%;
+                }
+                @include respond(phone2) {
+                    width: 23%;
+                }
+                &--p1 {
+                    left: 7rem;
+                    top: 2rem;
+                    @include respond(ipad2) {
+                        left: 13rem;
+                        top: 10rem;
+                    }
+                    @include respond(phone1) {
+                        left: 7rem;
+                        top: 6rem;
+                    }
+                    @include respond(phone2) {
+                        left: 7rem;
+                        top: 8rem;
+                    }
+                }
+                &--p2 {
+                    left: 22rem;
+                    top: 5rem;
+                    @include respond(ipad2) {
+                        left: 38rem;
+                        top: 14rem;
+                    }
+                    @include respond(phone1) {
+                        left: 27rem;
+                        top: 8rem;
+                    }
+                    @include respond(phone2) {
+                        left: 21rem;
+                        top: 10rem;
+                    }
+                }
+                &--p3 {
+                    left: 15rem;
+                    top: 14rem;
+                    @include respond(ipad2) {
+                        left: 26rem;
+                        top: 23rem;
+                    }
+                    @include respond(phone1) {
+                        left: 17rem;
+                        top: 14rem;
+                    }
+                    @include respond(phone2) {
+                        left: 14rem;
+                        top: 16rem;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: .8rem .8rem 1.2rem rgba(black, .5);
+                    z-index: 20;
+                }
+                &:hover &__photo:not(:hover) {
+                    transform: scale(.9)
+                }
+            }
+        }
+    }
+}

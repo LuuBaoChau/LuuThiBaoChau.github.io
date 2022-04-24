@@ -1,0 +1,92 @@
+.btn-view {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    --btn-bg: linear-gradient(to right bottom, #e9d0c5, #cfd4e0);
+    --bg: linear-gradient(to right bottom, #e9d0c5, #cfd4e0);
+    a {
+        text-decoration: none;
+    }
+    button {
+        --width: 15rem;
+        --height: 4rem;
+        border: 0;
+        position: relative;
+        min-width: var(--width);
+        min-height: var(--height);
+        //color: #fff;
+        font-family: "Montserrat";
+        font-weight: bold;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: .5px solid #ebdfda;
+        @include respond(phone2) {
+            --width: 13.5rem;
+        }
+        .text,
+        .icon-view {
+            position: relative;
+            z-index: 2;
+            font-size: 1.5rem;
+        }
+        .icon-view {
+            --icon-size: 2rem;
+            position: relative;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            margin-left: .9rem;
+            transition: transform 500ms ease;
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: var(--icon-size);
+                height: var(--icon-size);
+                transition: transform 500ms ease, opacity 250ms ease;
+                &--left {
+                    transform: translateX(-200%);
+                    opacity: 0;
+                }
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    //fill: #fff;
+                }
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--btn-bg);
+            z-index: 1;
+            transition: transform 500ms ease;
+        }
+        &:hover {
+            &::after {
+                transform: translateX(70%);
+            }
+            .icon-view {
+                transform: translateX(50%);
+                .icon {
+                    &--left {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    &--right {
+                        transform: translateX(200%);
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

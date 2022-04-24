@@ -1,0 +1,71 @@
+ @mixin absCenter {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ 
+ @mixin clearfix {
+     &::after {
+         content: "";
+         display: table;
+         clear: both;
+     }
+ }
+ 
+ @mixin respond($breakpoint) {
+     @if $breakpoint==desktop1 {
+         @media (min-width: 1920px) {
+             @content
+         }
+         ; //1920*1080
+     }
+     @if $breakpoint==desktop2 {
+         @media (min-width: 1688px) {
+             @content
+         }
+         ; //1688*?? (1080 || 768)
+     }
+     @if $breakpoint==desktop3 {
+         @media (min-width: 1440px) {
+             @content
+         }
+         ; //1440*768
+     }
+     @if $breakpoint==desktop4 {
+         @media (max-width: 1366px) {
+             @content
+         }
+         ; //1366*768
+     }
+     @if $breakpoint==desktop5 {
+         @media (max-width: 1280px) {
+             @content
+         }
+         ; //1280*768
+     }
+     @if $breakpoint==ipad1 {
+         @media (max-width: 1024px) {
+             @content
+         }
+         ; //1024*768
+     }
+     @if $breakpoint==ipad2 {
+         @media (max-width: 768px) {
+             @content
+         }
+         ; //768*1024
+     }
+     @if $breakpoint==phone1 {
+         @media (max-width: 480px) {
+             @content
+         }
+         ; //480*640
+     }
+     @if $breakpoint==phone2 {
+         @media (max-width: 320px) {
+             @content
+         }
+         ; //320*640
+     }
+ }

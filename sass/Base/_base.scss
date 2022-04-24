@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Anek Telugu', sans-serif;
+    line-height: 2.2rem;
+    color: $color-content;
+    @include respond(desktop3) {
+        font-size: 68.5%;
+    }
+    @include respond(desktop2) {
+        font-size: 76%;
+    }
+    @include respond(desktop1) {
+        font-size: 85%;
+    }
+    @include respond(desktop4) {
+        font-size: 62.5%;
+    }
+    @include respond(desktop4) {
+        font-size: 61.5%;
+    }
+    @include respond(ipad1) {
+        font-size: 58.5%;
+    }
+    @include respond(ipad2) {
+        font-size: 56%;
+    }
+    @include respond(phone1) {
+        font-size: 51.5%;
+    }
+    @include respond(phone2) {
+        font-size: 41%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
