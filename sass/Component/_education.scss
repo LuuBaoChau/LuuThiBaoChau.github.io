@@ -1,8 +1,9 @@
 .education {
     height: 100vh;
     background-color: $bg-color;
+    /*
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
     .bg-education img {
         position: absolute;
         width: 60%;
@@ -16,7 +17,7 @@
         height: 70vh;
     }
     @include respond(desktop3) {
-        height: 85vh;
+        height: 100vh;
     }
     @include respond(desktop5) {
         height: 80vh;

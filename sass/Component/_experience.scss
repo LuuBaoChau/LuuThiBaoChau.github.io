@@ -1,6 +1,8 @@
 .experience {
     position: relative;
     background-color: $bg-color;
+    background-size: cover;
+    background-position: center;
     color: $color-content;
     &__project {
         display: grid;

@@ -553,8 +553,9 @@ h4 {
 .education {
   height: 100vh;
   background-color: #FCFAF7;
-  background-size: cover;
-  background-position: center; }
+  /*
+    background-size: cover;
+    background-position: center;*/ }
   .education .bg-education img {
     position: absolute;
     width: 60%;
@@ -568,7 +569,7 @@ h4 {
       height: 70vh; } }
   @media (min-width: 1440px) {
     .education {
-      height: 85vh; } }
+      height: 100vh; } }
   @media (max-width: 1280px) {
     .education {
       height: 80vh; } }
@@ -876,7 +877,8 @@ h4 {
       margin-left: -5rem; }
 
 .softskills {
-  background-color: #FCFAF7;
+  position: relative;
+  background-color: rgba(253, 246, 232, 0.5);
   background-size: cover;
   background-position: center;
   font-size: 1.7rem; }
@@ -968,6 +970,8 @@ h4 {
 .experience {
   position: relative;
   background-color: #FCFAF7;
+  background-size: cover;
+  background-position: center;
   color: #423939;
   /*
     &__project6 {
@@ -1028,22 +1032,20 @@ h4 {
   .experience__project5 {
     background-color: #dff1d5; }
 
-/*.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .5;
+  overflow: hidden; }
+  .bg-video__content {
     height: 100%;
     width: 100%;
-    z-index: -1;
-    opacity: .5;
-    overflow: hidden;
-    &__content {
-        /* kết hợp vs overflow ở trên sẽ giúp video k bị tràn và vừa vs section
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}*/
+    object-fit: cover; }
+
 .btn-view {
   width: 100%;
   height: 100%;
