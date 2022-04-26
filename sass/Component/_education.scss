@@ -1,9 +1,14 @@
 .education {
     height: 100vh;
-    background-color: #fcfaf7;
-    background-image: url("../img/bg2.png");
+    background-color: $bg-color;
     background-size: cover;
     background-position: center;
+    .bg-education img {
+        position: absolute;
+        width: 60%;
+        margin-top: 1rem;
+        margin-left: 95rem;
+    }
     @include respond(desktop1) {
         height: 70vh;
     }

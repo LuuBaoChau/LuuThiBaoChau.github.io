@@ -410,7 +410,6 @@ h4 {
 .aboutme {
   height: 112vh;
   background-color: #fcfaf7;
-  background-image: url("../img/bgaboutme.png");
   background-position: center;
   background-size: cover; }
   @media (min-width: 1920px) {
@@ -428,6 +427,12 @@ h4 {
   @media (max-width: 320px) {
     .aboutme {
       height: 140vh; } }
+
+.bg-aboutme img {
+  position: absolute;
+  width: 40%;
+  margin-top: 30rem;
+  margin-left: -22rem; }
 
 .interests {
   margin: 0 auto;
@@ -547,10 +552,14 @@ h4 {
 
 .education {
   height: 100vh;
-  background-color: #fcfaf7;
-  background-image: url("../img/bg2.png");
+  background-color: #FCFAF7;
   background-size: cover;
   background-position: center; }
+  .education .bg-education img {
+    position: absolute;
+    width: 60%;
+    margin-top: 1rem;
+    margin-left: 95rem; }
   @media (min-width: 1920px) {
     .education {
       height: 70vh; } }

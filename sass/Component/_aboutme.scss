@@ -1,7 +1,6 @@
 .aboutme {
     height: 112vh;
     background-color: #fcfaf7;
-    background-image: url("../img/bgaboutme.png");
     background-position: center;
     background-size: cover;
     @include respond(desktop1) {
@@ -19,6 +18,13 @@
     @include respond(phone2) {
         height: 140vh;
     }
+}
+
+.bg-aboutme img {
+    position: absolute;
+    width: 40%;
+    margin-top: 30rem;
+    margin-left: -22rem;
 }
 
 .interests {
