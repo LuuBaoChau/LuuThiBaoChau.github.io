@@ -687,6 +687,11 @@ h4 {
   background-color: #FCFAF7;
   /* Effect 4 */
   /* Effect 4b */ }
+  .hardskills .bg-hardskills img {
+    position: absolute;
+    width: 60%;
+    margin-top: -20rem;
+    margin-left: -38rem; }
   .hardskills::after {
     content: "";
     display: table;
@@ -1039,7 +1044,7 @@ h4 {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .5;
+  opacity: .8;
   overflow: hidden; }
   .bg-video__content {
     height: 100%;

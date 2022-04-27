@@ -1,6 +1,12 @@
 .hardskills {
     height: 110vh;
     background-color: $bg-color;
+    .bg-hardskills img {
+        position: absolute;
+        width: 60%;
+        margin-top: -20rem;
+        margin-left: -38rem;
+    }
     @include clearfix;
     @include respond(desktop1) {
         height: 95vh;
