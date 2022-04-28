@@ -101,13 +101,14 @@
         @include respond(ipad2) {
             margin: auto;
             width: 50rem;
-            margin-top: -3.5em;
+            margin-top: -3.5rem;
         }
         @include respond(phone1) {
             width: 28rem;
         }
         @include respond(phone2) {
-            width: 27rem;
+            width: 46rem;
+            margin-top: -4rem;
         }
         /*
         @include respond(desktop3) {

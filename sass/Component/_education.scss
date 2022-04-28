@@ -9,6 +9,11 @@
         width: 60%;
         margin-top: 1rem;
         margin-left: 95rem;
+        @include respond(phone2) {
+            width: 120%;
+            margin-top: 38rem;
+            margin-left: 17rem;
+        }
     }
     @include respond(desktop1) {
         height: 70vh;

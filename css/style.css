@@ -104,10 +104,10 @@ html {
       font-size: 56%; } }
   @media (max-width: 480px) {
     html {
-      font-size: 51.5%; } }
+      font-size: 51%; } }
   @media (max-width: 320px) {
     html {
-      font-size: 41%; } }
+      font-size: 40%; } }
 
 body {
   box-sizing: border-box;
@@ -124,12 +124,15 @@ body {
     white-space: nowrap;
     overflow: hidden;
     width: 7.5rem;
-    animation: type 0.8s steps(40, end) forwards; }
-    @media (max-width: 768px) {
+    animation: type 0.8s steps(40, end) forwards;
+    /*@include respond(ipad2) {
+                text-align: center;
+                width: auto;
+                margin-top: .7vh;
+            }*/ }
+    @media (max-width: 320px) {
       .introduce__greeting h1:nth-child(1) {
-        text-align: center;
-        width: auto;
-        margin-top: .7vh; } }
+        margin-top: -8rem; } }
   .introduce__greeting h1:nth-child(2) {
     opacity: 0;
     font-family: 'Aleo', serif;
@@ -144,14 +147,15 @@ body {
     -webkit-text-fill-color: transparent;
     overflow: hidden;
     animation: shring-animation 2.2s steps(40, end) 0.8s forwards, blink 0.5s ease-in-out infinite alternate;
-    line-height: 3rem; }
-    @media (max-width: 768px) {
-      .introduce__greeting h1:nth-child(2) {
-        text-align: center;
-        width: auto; } }
+    line-height: 3rem;
+    /*@include respond(ipad2) {
+                text-align: center;
+                width: auto;
+            }*/ }
     @media (max-width: 320px) {
       .introduce__greeting h1:nth-child(2) {
-        font-size: 4rem; } }
+        font-size: 4.5rem;
+        width: 37.5rem; } }
 
 .introduce__welcome {
   margin-left: 4rem;
@@ -171,6 +175,9 @@ body {
     @media (max-width: 768px) {
       .introduce__welcome h2 {
         font-size: 3.3rem; } }
+    @media (max-width: 320px) {
+      .introduce__welcome h2 {
+        font-size: 3rem; } }
 
 /*-------ABOUT ME-------*/
 .title {
@@ -351,13 +358,14 @@ h4 {
     .introduce img {
       margin: auto;
       width: 50rem;
-      margin-top: -3.5em; } }
+      margin-top: -3.5rem; } }
   @media (max-width: 480px) {
     .introduce img {
       width: 28rem; } }
   @media (max-width: 320px) {
     .introduce img {
-      width: 27rem; } }
+      width: 46rem;
+      margin-top: -4rem; } }
 
 .introduce__welcome {
   animation: moveInBottom 2s ease-out 1s;
@@ -433,6 +441,11 @@ h4 {
   width: 40%;
   margin-top: 30rem;
   margin-left: -22rem; }
+  @media (max-width: 320px) {
+    .bg-aboutme img {
+      width: 100%;
+      margin-top: 40rem;
+      margin-left: -20rem; } }
 
 .interests {
   margin: 0 auto;
@@ -561,6 +574,11 @@ h4 {
     width: 60%;
     margin-top: 1rem;
     margin-left: 95rem; }
+    @media (max-width: 320px) {
+      .education .bg-education img {
+        width: 120%;
+        margin-top: 38rem;
+        margin-left: 17rem; } }
   @media (min-width: 1920px) {
     .education {
       height: 70vh; } }
@@ -692,6 +710,11 @@ h4 {
     width: 60%;
     margin-top: -20rem;
     margin-left: -38rem; }
+    @media (max-width: 320px) {
+      .hardskills .bg-hardskills img {
+        width: 80%;
+        margin-top: 8rem;
+        margin-left: -18rem; } }
   .hardskills::after {
     content: "";
     display: table;
@@ -729,7 +752,7 @@ h4 {
           margin-top: -1rem; } }
       @media (max-width: 320px) {
         .hardskills__row:not(:last-child) {
-          margin-top: -3rem; } }
+          margin-top: -2rem; } }
     @media (max-width: 1024px) {
       .hardskills__row {
         padding: .4rem .1rem; } }
@@ -765,19 +788,19 @@ h4 {
     content: '';
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
-    box-sizing: content-box; }
-    @media (max-width: 1024px) {
-      .hardskills .hovicon:after {
-        opacity: 0; } }
-    @media (max-width: 768px) {
-      .hardskills .hovicon:after {
-        opacity: 0; } }
-    @media (max-width: 480px) {
-      .hardskills .hovicon:after {
-        opacity: 0; } }
-    @media (max-width: 320px) {
-      .hardskills .hovicon:after {
-        opacity: 0; } }
+    box-sizing: content-box;
+    /*@include respond(ipad1) {
+            opacity: 0;
+        }
+        @include respond(ipad2) {
+            opacity: 0;
+        }
+        @include respond(phone1) {
+            opacity: 0;
+        }
+        @include respond(phone2) {
+            opacity: 0;
+        }*/ }
   .hardskills img {
     width: 60%;
     padding-top: 1.1rem; }
@@ -861,7 +884,7 @@ h4 {
         width: 83.5%;
         padding: 4rem;
         padding-left: 11rem;
-        margin-top: -1.5rem; } }
+        margin-top: -1rem; } }
     @media (max-width: 320px) {
       .hardskills .scrum {
         width: 84%;
@@ -877,9 +900,15 @@ h4 {
     .hardskills .scrum img {
       width: 12rem;
       height: 12rem; }
+      @media (max-width: 320px) {
+        .hardskills .scrum img {
+          width: 11rem;
+          height: 11rem;
+          margin-left: 1rem;
+          margin-top: -1rem; } }
     .hardskills .scrum p {
       font-size: 1.6rem;
-      margin-left: -5rem; }
+      margin-left: -4rem; }
 
 .softskills {
   position: relative;

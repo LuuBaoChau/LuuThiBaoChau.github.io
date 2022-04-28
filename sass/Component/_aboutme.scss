@@ -25,6 +25,11 @@
     width: 40%;
     margin-top: 30rem;
     margin-left: -22rem;
+    @include respond(phone2) {
+        width: 100%;
+        margin-top: 40rem;
+        margin-left: -20rem;
+    }
 }
 
 .interests {

@@ -33,10 +33,10 @@ html {
         font-size: 56%;
     }
     @include respond(phone1) {
-        font-size: 51.5%;
+        font-size: 51%;
     }
     @include respond(phone2) {
-        font-size: 41%;
+        font-size: 40%;
     }
 }
 

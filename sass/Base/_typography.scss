@@ -11,10 +11,13 @@
             overflow: hidden;
             width: 7.5rem;
             animation: type .8s steps(40, end) forwards;
-            @include respond(ipad2) {
+            /*@include respond(ipad2) {
                 text-align: center;
                 width: auto;
                 margin-top: .7vh;
+            }*/
+            @include respond(phone2) {
+                margin-top: -8rem;
             }
         }
         h1:nth-child(2) {
@@ -32,12 +35,13 @@
             overflow: hidden;
             animation: shring-animation 2.2s steps(40, end) .8s forwards, blink .5s ease-in-out infinite alternate;
             line-height: 3rem;
-            @include respond(ipad2) {
+            /*@include respond(ipad2) {
                 text-align: center;
                 width: auto;
-            }
+            }*/
             @include respond(phone2) {
-                font-size: 4rem;
+                font-size: 4.5rem;
+                width: 37.5rem;
             }
         }
     }
@@ -58,6 +62,9 @@
             }
             @include respond(ipad2) {
                 font-size: 3.3rem;
+            }
+            @include respond(phone2) {
+                font-size: 3rem;
             }
         }
     }

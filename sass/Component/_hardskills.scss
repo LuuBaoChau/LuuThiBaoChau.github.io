@@ -6,6 +6,11 @@
         width: 60%;
         margin-top: -20rem;
         margin-left: -38rem;
+        @include respond(phone2) {
+            width: 80%;
+            margin-top: 8rem;
+            margin-left: -18rem;
+        }
     }
     @include clearfix;
     @include respond(desktop1) {
@@ -40,7 +45,7 @@
                 margin-top: -1rem;
             }
             @include respond(phone2) {
-                margin-top: -3rem;
+                margin-top: -2rem;
             }
         }
         @include respond(ipad1) {
@@ -84,7 +89,7 @@
         -webkit-box-sizing: content-box;
         -moz-box-sizing: content-box;
         box-sizing: content-box;
-        @include respond(ipad1) {
+        /*@include respond(ipad1) {
             opacity: 0;
         }
         @include respond(ipad2) {
@@ -95,7 +100,7 @@
         }
         @include respond(phone2) {
             opacity: 0;
-        }
+        }*/
     }
     img {
         width: 60%;
@@ -195,7 +200,7 @@
             width: 83.5%;
             padding: 4rem;
             padding-left: 11rem;
-            margin-top: -1.5rem;
+            margin-top: -1rem;
         }
         @include respond(phone2) {
             width: 84%;
@@ -213,10 +218,16 @@
         img {
             width: 12rem;
             height: 12rem;
+            @include respond(phone2) {
+                width: 11rem;
+                height: 11rem;
+                margin-left: 1rem;
+                margin-top: -1rem;
+            }
         }
         p {
             font-size: 1.6rem;
-            margin-left: -5rem;
+            margin-left: -4rem;
         }
     }
 }
