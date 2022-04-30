@@ -14,58 +14,38 @@
  }
  
  @mixin respond($breakpoint) {
-     @if $breakpoint==desktop1 {
-         @media (min-width: 1920px) {
+     // Large devices (desktops, less than 1200px)
+     @if $breakpoint==desktop {
+         @media (max-width: 1199.98px) {
              @content
          }
-         ; //1920*1080
+         ;
      }
-     @if $breakpoint==desktop2 {
-         @media (min-width: 1688px) {
+     // Medium devices (tablets, less than 992px)
+     @if $breakpoint==tablet {
+         @media (max-width: 991.98px) {
              @content
          }
-         ; //1688*?? (1080 || 768)
+         ;
      }
-     @if $breakpoint==desktop3 {
-         @media (min-width: 1440px) {
+     // Small devices (landscape phones, less than 768px)
+     @if $breakpoint==phone {
+         @media (max-width: 767.98px) {
              @content
          }
-         ; //1440*768
+         ;
      }
-     @if $breakpoint==desktop4 {
-         @media (max-width: 1366px) {
-             @content
-         }
-         ; //1366*768
-     }
-     @if $breakpoint==desktop5 {
-         @media (max-width: 1280px) {
-             @content
-         }
-         ; //1280*768
-     }
-     @if $breakpoint==ipad1 {
-         @media (max-width: 1024px) {
-             @content
-         }
-         ; //1024*768
-     }
-     @if $breakpoint==ipad2 {
-         @media (max-width: 768px) {
-             @content
-         }
-         ; //768*1024
-     }
-     @if $breakpoint==phone1 {
-         @media (max-width: 480px) {
-             @content
-         }
-         ; //480*640
-     }
+     // Extra small devices (portrait phones, less than 576px)
      @if $breakpoint==phone2 {
-         @media (max-width: 320px) {
+         @media (max-width: 575.98px) {
              @content
          }
-         ; //320*640
+         ;
+     }
+     @if $breakpoint==phone3 {
+         @media (max-width: 357px) {
+             @content
+         }
+         ;
      }
  }

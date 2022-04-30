@@ -1,11 +1,13 @@
-.introduce {
+/*.introduce {
     @include respond(ipad2) {
         height: fit-content;
         text-align: center;
         @include absCenter;
         width: 90%;
     }
+    
     &__row {
+        @include clearfix;
         max-width: 130rem;
         margin: 0 auto;
         @include respond(desktop1) {
@@ -21,6 +23,7 @@
             max-width: 100rem;
         }
     }
+
     @include clearfix;
     &__row [class^="col-"] {
         float: left;
@@ -79,38 +82,39 @@
             margin-left: 0rem;
         }
     }
-    img {
-        margin-top: -15rem;
+
+img {
+    margin-top: -15rem;
+    width: 60rem;
+    @include respond(desktop1) {
+        width: 63rem;
+        margin-top: -8rem;
+    }
+    @include respond(desktop2) {
+        width: 64rem;
+    }
+    @include respond(desktop5) {
         width: 60rem;
-        @include respond(desktop1) {
-            width: 63rem;
-            margin-top: -8rem;
-        }
-        @include respond(desktop2) {
-            width: 64rem;
-        }
-        @include respond(desktop5) {
-            width: 60rem;
-            margin-left: -3rem;
-        }
-        @include respond(ipad1) {
-            width: 48rem;
-            margin-top: 3rem;
-            margin-left: 1rem;
-        }
-        @include respond(ipad2) {
-            margin: auto;
-            width: 50rem;
-            margin-top: -3.5rem;
-        }
-        @include respond(phone1) {
-            width: 28rem;
-        }
-        @include respond(phone2) {
-            width: 46rem;
-            margin-top: -4rem;
-        }
-        /*
+        margin-left: -3rem;
+    }
+    @include respond(ipad1) {
+        width: 48rem;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+    @include respond(ipad2) {
+        margin: auto;
+        width: 50rem;
+        margin-top: -3.5rem;
+    }
+    @include respond(phone1) {
+        width: 28rem;
+    }
+    @include respond(phone2) {
+        width: 46rem;
+        margin-top: -4rem;
+    }
+    /*
         @include respond(desktop3) {
             width: 35rem;
             margin-left: 8rem;
@@ -127,6 +131,45 @@
         @include respond(ipad) {
             width: 33rem;
             margin-left: 13rem;
-        }*/
+        }
+}*/
+
+.introduce {
+    padding-top: 18rem;
+    padding-left: 4rem;
+    @include respond(desktop) {
+        padding-left: 10rem;
+    }
+    @include respond(tablet) {
+        padding-top: 12rem;
+        padding-left: 6rem;
+    }
+    .col-6 {
+        width: 50%;
+        @include respond(phone) {
+            width: 100%;
+            padding: 0 10rem;
+            margin-top: -10rem;
+        }
+        @include respond(phone2) {
+            width: 100%;
+            padding: 0 10rem;
+        }
+    }
+    img {
+        width: 100%;
+        margin-top: -15rem;
+        @include respond(desktop) {
+            padding-top: 5rem;
+        }
+        @include respond(tablet) {
+            padding-top: 6rem;
+        }
+        @include respond(phone) {
+            margin-top: 14rem;
+        }
+        @include respond(phone2) {
+            margin-top: 3rem;
+        }
     }
 }

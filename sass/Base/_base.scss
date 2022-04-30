@@ -29,14 +29,14 @@ html {
     @include respond(ipad1) {
         font-size: 58.5%;
     }
-    @include respond(ipad2) {
+    @include respond(tablet) {
         font-size: 56%;
     }
-    @include respond(phone1) {
-        font-size: 51%;
+    @include respond(phone) {
+        font-size: 56%;
     }
     @include respond(phone2) {
-        font-size: 40%;
+        font-size: 42%;
     }
 }
 

@@ -67,8 +67,9 @@
             cursor: pointer;
         }
         &--col img {
-            width: 90%;
-            height: 55%;
+            width: 34rem;
+            height: 20rem;
+            margin: 3rem 1.5rem 10rem 1.5rem;
             @include respond(phone1) {
                 width: 70%;
                 margin-left: 0rem;

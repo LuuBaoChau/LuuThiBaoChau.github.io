@@ -1,6 +1,9 @@
 .education {
     height: 100vh;
     background-color: $bg-color;
+    @include respond(phone) {
+        height: 150vh;
+    }
     /*
     background-size: cover;
     background-position: center;*/
@@ -11,43 +14,53 @@
         margin-left: 95rem;
         @include respond(phone2) {
             width: 120%;
-            margin-top: 38rem;
-            margin-left: 17rem;
+            margin-top: 30rem;
+            margin-left: 27rem;
         }
     }
-    @include respond(desktop1) {
-        height: 70vh;
-    }
-    @include respond(desktop2) {
-        height: 70vh;
-    }
-    @include respond(desktop3) {
-        height: 100vh;
-    }
-    @include respond(desktop5) {
-        height: 80vh;
-    }
+    // @include respond(desktop1) {
+    //     height: 70vh;
+    // }
+    // @include respond(desktop2) {
+    //     height: 70vh;
+    // }
+    // @include respond(desktop3) {
+    //     height: 100vh;
+    // }
+    // @include respond(desktop5) {
+    //     height: 80vh;
+    // }
     &__row {
         display: grid;
-        width: 100rem;
+        width: auto;
         margin: 0 auto;
         grid-template-columns: 55% 45%;
         grid-column-gap: 2rem;
         padding: 3.5rem;
         text-align: center;
-        @include respond(ipad2) {
-            display: block;
-            margin-left: 3.5rem;
+        // @include respond(ipad2) {
+        //     display: block;
+        //     margin-left: 3.5rem;
+        // }
+        // @include respond(phone1) {
+        //     display: block;
+        //     margin-left: 2rem;
+        //     margin-top: -10rem;
+        //     width: 65rem;
+        // }
+        @include respond(tablet) {
+            margin-top: -2rem;
         }
-        @include respond(phone1) {
+        @include respond(phone) {
             display: block;
+            width: auto;
             margin-left: 2rem;
-            margin-top: -10rem;
-            width: 65rem;
+            margin-top: -8rem;
         }
         @include respond(phone2) {
             display: block;
-            margin-left: 0;
+            width: auto;
+            margin-left: 2rem;
             margin-top: -10rem;
         }
         &--col1 {
@@ -59,11 +72,14 @@
                 margin: 1.4rem auto;
                 margin-bottom: 2rem;
             }
-            @include respond(ipad2) {
-                width: 80%;
+            @include respond(tablet) {
+                width: 92%;
+            }
+            @include respond(phone) {
+                width: auto;
             }
             @include respond(phone2) {
-                width: 67%;
+                width: auto;
             }
         }
         h3 {
@@ -78,61 +94,76 @@
                 position: absolute;
                 z-index: 10;
                 transition: all .2s;
-                @include respond(ipad1) {
+                @include respond(desktop) {
                     width: 50%;
                 }
-                @include respond(ipad2) {
-                    width: 30%;
+                @include respond(tablet) {
+                    width: 50%;
+                }
+                @include respond(phone) {
+                    width: 40%;
                 }
                 @include respond(phone2) {
-                    width: 23%;
+                    width: 30%;
                 }
                 &--p1 {
                     left: 7rem;
                     top: 2rem;
-                    @include respond(ipad2) {
-                        left: 13rem;
-                        top: 10rem;
+                    @include respond(desktop) {
+                        left: 3rem;
+                        top: 3rem;
                     }
-                    @include respond(phone1) {
+                    @include respond(tablet) {
+                        left: 0;
+                        top: 3rem;
+                    }
+                    @include respond(phone) {
                         left: 7rem;
-                        top: 6rem;
+                        top: 13rem;
                     }
                     @include respond(phone2) {
-                        left: 7rem;
-                        top: 8rem;
+                        left: 10rem;
+                        top: 12rem;
                     }
                 }
                 &--p2 {
                     left: 22rem;
                     top: 5rem;
-                    @include respond(ipad2) {
-                        left: 38rem;
-                        top: 14rem;
+                    @include respond(desktop) {
+                        left: 24rem;
+                        top: 7rem;
                     }
-                    @include respond(phone1) {
-                        left: 27rem;
-                        top: 8rem;
+                    @include respond(tablet) {
+                        left: 21rem;
+                        top: 7rem;
+                    }
+                    @include respond(phone) {
+                        left: 42rem;
+                        top: 16rem;
                     }
                     @include respond(phone2) {
-                        left: 21rem;
-                        top: 10rem;
+                        left: 40rem;
+                        top: 15rem;
                     }
                 }
                 &--p3 {
                     left: 15rem;
                     top: 14rem;
-                    @include respond(ipad2) {
-                        left: 26rem;
-                        top: 23rem;
-                    }
-                    @include respond(phone1) {
+                    @include respond(desktop) {
                         left: 17rem;
-                        top: 14rem;
+                        top: 17rem;
+                    }
+                    @include respond(tablet) {
+                        left: 10rem;
+                        top: 15rem;
+                    }
+                    @include respond(phone) {
+                        left: 23rem;
+                        top: 28rem;
                     }
                     @include respond(phone2) {
-                        left: 14rem;
-                        top: 16rem;
+                        left: 25rem;
+                        top: 23rem;
                     }
                 }
                 &:hover {
